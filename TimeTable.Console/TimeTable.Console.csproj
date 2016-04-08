@@ -49,12 +49,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TimeTable.SharedBusinessLogic\TimeTable.SharedBusinessLogic.csproj">
-      <Project>{e04f1077-eb14-4849-b93f-03a6cdc08d7d}</Project>
-      <Name>TimeTable.SharedBusinessLogic</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <Import Project="..\TimeTable.SharedProject\TimeTable.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

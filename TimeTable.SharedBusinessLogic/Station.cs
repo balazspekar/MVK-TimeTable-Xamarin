@@ -1,26 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 
-namespace TimeTable.SharedBusinessLogic
+namespace TimeTable.PCL
 {
     public class Station
     {
-        private readonly int stationID;
-
-        public int StationID
-        {
-            get { return stationID; }
-        }
-
-
-        public Station(int stationID)
-        {
-            this.stationID = stationID;
-        }
-
         
+        // Backing Fields & Properties
+        private string rawDataFromServer;
+        public int StationId { get; }
+        
+        // Constructors
+        public Station(int stationId)
+        {
+            StationId = stationId;
+        }
+
+        // Methods
+        public void UpdateRawData()
+        {
+            WebRequest request = WebRequest.Create("http://www.contoso.com/");
+            request.Credentials = CredentialCache.DefaultCredentials;
+            request.Method = "POST";
+
+
+        }
 
     }
 }
