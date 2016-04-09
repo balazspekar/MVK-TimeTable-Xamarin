@@ -9,56 +9,32 @@ using Android.Widget;
 using Android.OS;
 using Javax.Security.Auth;
 using TimeTable.SharedProject;
+using System.Collections.Generic;
+using Android;
 
-namespace TimeTable.Android
+namespace TimeTable.Droid
 {
-    [Activity(Label = "Menetrend Miskolc", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.Black")]
+    [Activity(Label = "Menetrend Miskolc", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.Light.NoTitleBar")]
     public class MainActivity : Activity
     {
-        private static int count;
-
+        private List<string> _myItems;
+        private ListView _mainListView;
+         
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.layout1);
+            SetContentView(Resource.Layout.Main);
+            _mainListView = FindViewById<ListView>(Resource.Id.mainListView);
 
-            string _data;
-            TextView myTextView = FindViewById<TextView>(Resource.Id.textView1);
-            Button myButton = FindViewById<Button>(Resource.Id.button1);
-            myTextView.Text = "VALAMI";
+            _myItems = new List<string>() { "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven" };
 
 
-            Station station = new Station("513");
-
-            
-            //station.Update();
-            //_data = station.RawData;
-            ////System.Threading.Thread.Sleep(3000);
-            //myTextView.Text = _data;
-
-
-            //myButton.Click += delegate {
-            //    _data = station.RawData;
-            //    myTextView.Text = _data;
-            //};
-
-            //myButton.Click += delegate
-            //{
-            //    myButton.Text = string.Format("{0} clicks!", count++);
-            //    _data = station.RawData;
-            //    //System.Threading.Thread.Sleep(3000);
-            //    myTextView.Text = _data;
-            //};
-
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, _myItems);
+            _mainListView.Adapter = adapter;
 
         }
 
-        private void Refresh()
-        {
-            
-        }
     }
 }
 

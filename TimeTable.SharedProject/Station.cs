@@ -8,14 +8,14 @@ namespace TimeTable.SharedProject
     /// <summary>
     /// This class is representing an MVK Miskolc tram/bus station and provides departure information based on a special station ID.
     /// The constructor takes a so-called "SMART ID" which is advertised as "SMS code" in the stations for passengers.
-    /// To get the soon-to-departuring lines (aka vehicles)
+    /// To get the soon-to-departuring lines (aka vehicles) data for an exact location you must provide the "SMART ID" first.
+    /// You can get the following: 
     ///   - Route/Line Name (string)
     ///   - Route/Line Description (string)
     ///   - Departure Time (DateTime)
-    ///   - Time in seconds (int) until Departure Time based on DateTime.now
-    /// for an exact location you must provide the "SMART ID" first.
+    ///   - Time in seconds until Departure Time based on DateTime.now (int)
     /// Instantiate an obect from this class and call the "Schedules" property whenever you want to get access to the latest schedule.
-    /// This will return a Queue with a bundle Departure objects.
+    /// This will return a Queue with a bundle, "Departure" objects.
     /// </summary>
     class Station
     {

@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:paddingTop="20dp"
-    android:paddingBottom="20dp">
+    android:paddingTop="5dp"
+    android:background="#DCE775">
     <TextView
-        android:text="Text"
-        android:layout_width="wrap_content"
+        android:text="Menetrend App"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:textColor="@android:color/holo_blue_light" />
-    <TextView
-        android:text="Ide jon a szovegem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView1"
-        android:id="@+id/textView2"
-        android:textColor="@android:color/holo_orange_dark" />
-</RelativeLayout>
+        android:id="@+id/titleTextView"
+        android:paddingBottom="15dp"
+        android:textColor="#000000"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainListView"
+        android:background="#F9FBE7" />
+</LinearLayout>

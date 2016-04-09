@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTable.Android", "TimeTable.Android\TimeTable.Android.csproj", "{B20E4723-F2DB-4C9A-B4DF-0EAB5BCA61E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTable.Droid", "TimeTable.Android\TimeTable.Droid.csproj", "{B20E4723-F2DB-4C9A-B4DF-0EAB5BCA61E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTable.Console", "TimeTable.Console\TimeTable.Console.csproj", "{C1025253-30A3-4B17-9474-3799DFCA3A1C}"
 EndProject
