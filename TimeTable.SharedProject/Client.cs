@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TimeTable.Shared
+namespace TimeTable.SharedProject
 {
     class Client
     {

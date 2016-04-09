@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using TimeTable.Shared;
+using TimeTable.SharedProject;
 
 namespace TimeTable.Console
 {
@@ -12,13 +12,18 @@ namespace TimeTable.Console
     {
         static void Main(string[] args)
         {
-            Station station = new Station("513");
+            Station tramStation = new Station("514");
+            Queue<DateTime> schedules = new Queue<DateTime>();
+            schedules = tramStation.Schedules;
+
             while (true)
             {
-                System.Console.Clear();
-                station.Update();
-                System.Console.WriteLine(station.RawData);
+                foreach (var schedule in schedules)
+                {
+                    System.Console.WriteLine(schedule.ToString());
+                }
                 System.Threading.Thread.Sleep(3000);
+                System.Console.Clear();
             }
 
 
