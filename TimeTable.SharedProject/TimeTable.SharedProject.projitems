@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Client.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Departure.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Station.cs" />
   </ItemGroup>
 </Project>

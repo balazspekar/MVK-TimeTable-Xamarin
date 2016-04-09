@@ -8,7 +8,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Javax.Security.Auth;
-using TimeTable.Shared;
+using TimeTable.SharedProject;
 
 namespace TimeTable.Android
 {
@@ -33,24 +33,24 @@ namespace TimeTable.Android
             Station station = new Station("513");
 
             
-            station.Update();
-            _data = station.RawData;
-            //System.Threading.Thread.Sleep(3000);
-            myTextView.Text = _data;
+            //station.Update();
+            //_data = station.RawData;
+            ////System.Threading.Thread.Sleep(3000);
+            //myTextView.Text = _data;
 
 
-            myButton.Click += delegate {
-                _data = station.RawData;
-                myTextView.Text = _data;
-            };
+            //myButton.Click += delegate {
+            //    _data = station.RawData;
+            //    myTextView.Text = _data;
+            //};
 
-            myButton.Click += delegate
-            {
-                myButton.Text = string.Format("{0} clicks!", count++);
-                _data = station.RawData;
-                //System.Threading.Thread.Sleep(3000);
-                myTextView.Text = _data;
-            };
+            //myButton.Click += delegate
+            //{
+            //    myButton.Text = string.Format("{0} clicks!", count++);
+            //    _data = station.RawData;
+            //    //System.Threading.Thread.Sleep(3000);
+            //    myTextView.Text = _data;
+            //};
 
 
         }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TimeTable.SharedProject;
 
 namespace TimeTable.Console
@@ -12,20 +7,17 @@ namespace TimeTable.Console
     {
         static void Main(string[] args)
         {
-            Station tramStation = new Station("514");
-            Queue<DateTime> schedules = new Queue<DateTime>();
+            Station tramStation = new Station("513");
+            
+            Queue<Departure> schedules = new Queue<Departure>();
+
             schedules = tramStation.Schedules;
 
-            while (true)
+            foreach (var departure in schedules)
             {
-                foreach (var schedule in schedules)
-                {
-                    System.Console.WriteLine(schedule.ToString());
-                }
-                System.Threading.Thread.Sleep(3000);
-                System.Console.Clear();
+                System.Console.WriteLine(departure.RouteName + "|" + 
+                    departure.RouteDescription + "|" + departure.DepartureTime.ToString() + "|" + departure.SecondsUntilDepartureTime / 60);
             }
-
 
         }
     }
