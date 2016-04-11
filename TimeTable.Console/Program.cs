@@ -18,15 +18,15 @@ namespace TimeTable.Console
 
             while (true)
             {
-                foreach (var departure in schedules513)
-                {
-                    System.Console.WriteLine(departure.RouteName + "|" +
-                                             departure.RouteDescription + "|" + departure.DepartureTime.ToString() + "|" +
-                                             departure.SecondsUntilDepartureTime/ 60 + "|" + departure.SecondsUntilDepartureTime);
-                }
-                schedules513 = tramStation513.Schedules;
+                //foreach (var departure in schedules513)
+                //{
+                //    System.Console.WriteLine(departure.RouteName + "|" +
+                //                             departure.RouteDescription + "|" + departure.DepartureTime.ToString() + "|" +
+                //                             departure.SecondsUntilDepartureTime/ 60 + "|" + departure.SecondsUntilDepartureTime);
+                //}
+                //schedules513 = tramStation513.Schedules;
 
-                System.Console.WriteLine();
+                //System.Console.WriteLine();
 
                 foreach (var departure in schedules514)
                 {

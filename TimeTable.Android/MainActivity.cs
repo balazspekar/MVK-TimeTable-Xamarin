@@ -19,15 +19,23 @@ namespace TimeTable.Droid
     {
         private List<string> _myItems;
         private ListView _mainListView;
+        private Station station;
          
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
+            // Set Content View
             SetContentView(Resource.Layout.Main);
+
+            // Setting up background stuff
+            //station = new Station("513");
+            //Queue<Departure> schedules = new Queue<Departure>();
+
+            // Setting up screen elements
             _mainListView = FindViewById<ListView>(Resource.Id.mainListView);
 
-            _myItems = new List<string>() { "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven" };
+            _myItems = new List<string>() { "Gergo", "Balazs", "Istok" };
 
 
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, _myItems);

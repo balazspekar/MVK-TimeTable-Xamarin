@@ -69,7 +69,8 @@ namespace TimeTable.SharedProject
 
         private string PullDataFromServer()
         {
-            return Client.FetchRawDataFromServer(HandlerAddress, _smartId);
+            var rawData = Client.FetchRawDataFromServer(HandlerAddress, _smartId);
+            return rawData;
         }
     }
 }
