@@ -50,11 +50,12 @@ namespace TimeTable.Droid.ListViewAdapters
             routeDescTextView.Text = departures[position].RouteDescription;
 
             TextView departureTimeTextView = row.FindViewById<TextView>(Resource.Id.departureTimeTextView);
-            departureTimeTextView.Text = departures[position].DepartureTime.ToString();
+            var departureTime = departures[position].DepartureTime.ToString("HH:mm");
+            departureTimeTextView.Text = departureTime;
 
             TextView minsUntilDepartureTimeTextView = row.FindViewById<TextView>(Resource.Id.minsUntilDepartureTimeTextView);
             var minutesUntilDeparture = departures[position].SecondsUntilDepartureTime / 60;
-            minsUntilDepartureTimeTextView.Text = minutesUntilDeparture.ToString();
+            minsUntilDepartureTimeTextView.Text = minutesUntilDeparture.ToString() + " perc múlva indul";
 
             return row;
 

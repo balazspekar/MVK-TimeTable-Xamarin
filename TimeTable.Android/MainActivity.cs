@@ -50,7 +50,7 @@ namespace TimeTable.Droid
 
             watchedStations = FindViewById<ListView>(Resource.Id.watchedStationsListView);
 
-            items = new string[] { "513", "514" };
+            items = new string[] { "513", "514", "89" };
             var adapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
 
             watchedStations.Adapter = adapter;

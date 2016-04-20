@@ -9,7 +9,7 @@ using TimeTable.Droid.ListViewAdapters;
 
 namespace TimeTable.Droid
 {
-    [Activity(Label = "RouteDetails")]
+    [Activity(Label = "Virtuális Megállótábla")]
     public class RouteDetails : Activity
     {
         ListView routeDetailsListView;
