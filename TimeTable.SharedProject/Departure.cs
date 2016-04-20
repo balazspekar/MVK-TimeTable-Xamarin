@@ -22,5 +22,10 @@ namespace TimeTable.SharedProject
             this.DepartureTime = departureTime;
             this.SecondsUntilDepartureTime = secondsUntilDepartureTime;
         }
+
+        public override string ToString()
+        {
+            return RouteName + ", " + RouteDescription + ", " + DepartureTime + ", " + SecondsUntilDepartureTime.ToString();
+        }
     }
 }

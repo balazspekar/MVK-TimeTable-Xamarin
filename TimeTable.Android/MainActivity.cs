@@ -14,35 +14,58 @@ using Android;
 
 namespace TimeTable.Droid
 {
-    [Activity(Label = "Menetrend Miskolc", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.Light.NoTitleBar")]
+    [Activity(Label = "Menetrend", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.DeviceDefault.Light.DarkActionBar")]
+
     public class MainActivity : Activity
     {
-        private List<string> _myItems;
-        private ListView _mainListView;
-        private Station station;
-         
+        ListView watchedStations;
+        List<string> watchedStationDetails;
+        string[] items;
+
+        #region ActionBarMenu
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Layout.ActionMenu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.actionBarBtnSettings:
+                    Console.WriteLine("ActionBar Setting Button Pressed");
+                    return true;
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+        #endregion
+
+        
+        
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
-            // Set Content View
             SetContentView(Resource.Layout.Main);
 
-            // Setting up background stuff
-            //station = new Station("513");
-            //Queue<Departure> schedules = new Queue<Departure>();
+            watchedStations = FindViewById<ListView>(Resource.Id.watchedStationsListView);
 
-            // Setting up screen elements
-            _mainListView = FindViewById<ListView>(Resource.Id.mainListView);
+            items = new string[] { "513", "514" };
+            var adapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
 
-            _myItems = new List<string>() { "Gergo", "Balazs", "Istok" };
+            watchedStations.Adapter = adapter;
 
-
-            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, _myItems);
-            _mainListView.Adapter = adapter;
+            watchedStations.ItemClick += WatchedStations_ItemClick;
 
         }
 
+        private void WatchedStations_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            var RouteDetails = new Intent(this, typeof(RouteDetails));
+            RouteDetails.PutExtra("SMART_ID", items[e.Position]);
+            
+            StartActivity(RouteDetails);
+        }
     }
 }
 

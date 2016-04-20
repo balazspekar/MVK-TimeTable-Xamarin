@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:paddingTop="5dp"
+    android:background="#fff">
+    <TextView
+        android:text="1V"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:id="@+id/routeNameTextView"
+        android:paddingTop="10dp"
+        android:paddingStart="20dp"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+    <TextView
+        android:text="Tiszai Pályaudvar - Felső Majláth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/routeDescTextView"
+        android:textColor="#000000"
+        android:paddingTop="5dp"
+        android:paddingStart="20dp" />
+    <TextView
+        android:text="18:23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/departureTimeTextView"
+        android:textColor="#000000"
+        android:paddingTop="5dp"
+        android:paddingStart="20dp" />
+    <TextView
+        android:text="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/minsUntilDepartureTimeTextView"
+        android:textColor="#000000"
+        android:paddingTop="5dp"
+        android:paddingStart="20dp" />
+</LinearLayout>

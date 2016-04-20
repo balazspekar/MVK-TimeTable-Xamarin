@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+    <TextView
+        android:text="Egyelőre nincs mit megjeleníteni! Kérlek adj hozzá minimum egy megállót a listához."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMainWithoutStatonsWarningMessage"
+        android:paddingTop="100dp"
+        android:paddingRight="30dp"
+        android:paddingStart="30dp"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+    <Button
+        android:text="Vigyél a beállításokhoz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnTakeMeToSettings" />
+</LinearLayout>

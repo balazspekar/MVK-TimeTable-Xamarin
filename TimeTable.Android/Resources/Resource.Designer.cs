@@ -60,11 +60,32 @@ namespace TimeTable.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int mainListView = 2131034113;
-			
 			// aapt resource value: 0x7f050000
-			public const int titleTextView = 2131034112;
+			public const int actionBarBtnSettings = 2131034112;
+			
+			// aapt resource value: 0x7f050003
+			public const int btnTakeMeToSettings = 2131034115;
+			
+			// aapt resource value: 0x7f050007
+			public const int departureTimeTextView = 2131034119;
+			
+			// aapt resource value: 0x7f050008
+			public const int minsUntilDepartureTimeTextView = 2131034120;
+			
+			// aapt resource value: 0x7f050006
+			public const int routeDescTextView = 2131034118;
+			
+			// aapt resource value: 0x7f050004
+			public const int routeDetailsListView = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int routeNameTextView = 2131034117;
+			
+			// aapt resource value: 0x7f050002
+			public const int txtMainWithoutStatonsWarningMessage = 2131034114;
+			
+			// aapt resource value: 0x7f050001
+			public const int watchedStationsListView = 2131034113;
 			
 			static Id()
 			{
@@ -80,7 +101,19 @@ namespace TimeTable.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int ActionMenu = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int MainFirstStart = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int RouteDetails = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int StationDetailsListViewRow = 2130903044;
 			
 			static Layout()
 			{

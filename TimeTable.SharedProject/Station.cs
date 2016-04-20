@@ -22,7 +22,7 @@ namespace TimeTable.SharedProject
         // Fields and Properties
         private readonly string _smartId;
         private const string HandlerAddress = "http://owa.mvkzrt.hu:8080/android/handler.php";
-        public Queue<Departure> Schedules => UpdateQueue();
+        public List<Departure> Schedules => UpdateSchedulesList();
 
         // Constructor
         public Station(string smartId)
@@ -31,9 +31,9 @@ namespace TimeTable.SharedProject
         }
 
         // Methods
-        private Queue<Departure> UpdateQueue()
+        private List<Departure> UpdateSchedulesList()
         {
-            var result = new Queue<Departure>();
+            var result = new List<Departure>();
             var lines = GetLines();
 
             foreach (var line in lines)
@@ -49,7 +49,7 @@ namespace TimeTable.SharedProject
 
                 // creating a bundle Departure object and enqueing it
                 var departure = new Departure(actualRouteName, actualRouteDescription, actualDepartureTime, actualSecondsUntilDepartureTime);
-                result.Enqueue(departure);
+                result.Add(departure);
             }
             
             return result;
