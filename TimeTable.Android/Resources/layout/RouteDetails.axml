@@ -6,10 +6,27 @@
     android:background="#FFFFFF"
     android:minWidth="25px"
     android:minHeight="25px">
-    <ListView
-        android:minWidth="25px"
-        android:minHeight="25px"
+    <TextView
+        android:text="Utoljára Frissítve: ÓÓ:PP"
+        android:textColor="#000000"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/routeDetailsListView" />
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLastUpdated"
+        android:textSize="10sp"
+        android:gravity="left"
+        android:background="@android:color/holo_blue_bright"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="15dp" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/routeDetailsListView" />
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

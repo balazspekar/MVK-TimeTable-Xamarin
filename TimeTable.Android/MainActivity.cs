@@ -14,7 +14,7 @@ using Android;
 
 namespace TimeTable.Droid
 {
-    [Activity(Label = "Menetrend", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.DeviceDefault.Light.DarkActionBar")]
+    [Activity(Label = "Megálló", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.DeviceDefault.Light.DarkActionBar")]
 
     public class MainActivity : Activity
     {
@@ -23,6 +23,9 @@ namespace TimeTable.Droid
         string[] items;
 
         #region ActionBarMenu
+        
+
+
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Layout.ActionMenu, menu);
@@ -50,7 +53,8 @@ namespace TimeTable.Droid
 
             watchedStations = FindViewById<ListView>(Resource.Id.watchedStationsListView);
 
-            items = new string[] { "513", "514", "89" };
+            //items = new string[] { "513", "514", "89", "483", "485", "487" };
+            items = new string[] { "494", "483", "485", "487" };
             var adapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
 
             watchedStations.Adapter = adapter;
@@ -64,7 +68,28 @@ namespace TimeTable.Droid
             var RouteDetails = new Intent(this, typeof(RouteDetails));
             RouteDetails.PutExtra("SMART_ID", items[e.Position]);
             
+            if (e.Position == 0) 
+            {
+                Toast.MakeText(this, "Thököly - Belváros Felé", ToastLength.Long).Show();
+            }
+
+            if (e.Position == 1)
+            {
+                Toast.MakeText(this, "Centrum - Diósgyőr felé", ToastLength.Long).Show();
+            }
+
+            if (e.Position == 2)
+            {
+                Toast.MakeText(this, "Villanyrendőr - Diósgyőr felé", ToastLength.Long).Show();
+            }
+
+            if (e.Position == 3)
+            {
+                Toast.MakeText(this, "Városház tér - Diósgyőr felé", ToastLength.Long).Show();
+            }
+
             StartActivity(RouteDetails);
+            this.OverridePendingTransition(Resource.Animation.slide_in_top, Resource.Animation.slide_out_bottom);
         }
     }
 }

@@ -28,6 +28,25 @@ namespace TimeTable.Droid
 		{
 		}
 		
+		public partial class Animation
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int slide_in_top = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int slide_out_bottom = 2130968577;
+			
+			static Animation()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Animation()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -47,6 +66,9 @@ namespace TimeTable.Droid
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
 			
+			// aapt resource value: 0x7f020001
+			public const int icon_big = 2130837505;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -60,44 +82,53 @@ namespace TimeTable.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int actionBarBtnSettings = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int actionBarBtnAdd = 2131099648;
 			
-			// aapt resource value: 0x7f050003
-			public const int btnTakeMeToSettings = 2131034115;
+			// aapt resource value: 0x7f060001
+			public const int actionBarBtnSettings = 2131099649;
 			
-			// aapt resource value: 0x7f050006
-			public const int container = 2131034118;
+			// aapt resource value: 0x7f060004
+			public const int btnTakeMeToSettings = 2131099652;
 			
-			// aapt resource value: 0x7f050008
-			public const int departureTimeTextView = 2131034120;
+			// aapt resource value: 0x7f060009
+			public const int container = 2131099657;
 			
-			// aapt resource value: 0x7f050009
-			public const int minsUntilDepartureTimeTextView = 2131034121;
+			// aapt resource value: 0x7f06000b
+			public const int departureTimeTextView = 2131099659;
 			
-			// aapt resource value: 0x7f05000a
-			public const int routeDescTextView = 2131034122;
+			// aapt resource value: 0x7f06000c
+			public const int minsUntilDepartureTimeTextView = 2131099660;
 			
-			// aapt resource value: 0x7f050004
-			public const int routeDetailsListView = 2131034116;
+			// aapt resource value: 0x7f060006
+			public const int refresher = 2131099654;
 			
-			// aapt resource value: 0x7f050007
-			public const int routeNameTextView = 2131034119;
+			// aapt resource value: 0x7f06000d
+			public const int routeDescTextView = 2131099661;
 			
-			// aapt resource value: 0x7f050005
-			public const int stationDetailsRow = 2131034117;
+			// aapt resource value: 0x7f060007
+			public const int routeDetailsListView = 2131099655;
 			
-			// aapt resource value: 0x7f05000b
-			public const int textView1 = 2131034123;
+			// aapt resource value: 0x7f06000a
+			public const int routeNameTextView = 2131099658;
 			
-			// aapt resource value: 0x7f05000c
-			public const int textView2 = 2131034124;
+			// aapt resource value: 0x7f060008
+			public const int stationDetailsRow = 2131099656;
 			
-			// aapt resource value: 0x7f050002
-			public const int txtMainWithoutStatonsWarningMessage = 2131034114;
+			// aapt resource value: 0x7f06000e
+			public const int textView1 = 2131099662;
 			
-			// aapt resource value: 0x7f050001
-			public const int watchedStationsListView = 2131034113;
+			// aapt resource value: 0x7f06000f
+			public const int textView2 = 2131099663;
+			
+			// aapt resource value: 0x7f060005
+			public const int txtLastUpdated = 2131099653;
+			
+			// aapt resource value: 0x7f060003
+			public const int txtMainWithoutStatonsWarningMessage = 2131099651;
+			
+			// aapt resource value: 0x7f060002
+			public const int watchedStationsListView = 2131099650;
 			
 			static Id()
 			{
@@ -143,11 +174,11 @@ namespace TimeTable.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int ApplicationName = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int Hello = 2131034112;
 			
 			static String()
 			{

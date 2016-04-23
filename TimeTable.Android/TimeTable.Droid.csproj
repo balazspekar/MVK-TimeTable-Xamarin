@@ -91,6 +91,15 @@
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\slide_in_top.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\slide_out_bottom.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_big.png" />
+  </ItemGroup>
   <Import Project="..\TimeTable.SharedProject\TimeTable.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

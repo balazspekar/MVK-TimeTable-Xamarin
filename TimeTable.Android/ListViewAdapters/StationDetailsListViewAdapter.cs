@@ -54,8 +54,18 @@ namespace TimeTable.Droid.ListViewAdapters
             departureTimeTextView.Text = departureTime;
 
             TextView minsUntilDepartureTimeTextView = row.FindViewById<TextView>(Resource.Id.minsUntilDepartureTimeTextView);
-            var minutesUntilDeparture = departures[position].SecondsUntilDepartureTime / 60;
-            minsUntilDepartureTimeTextView.Text = minutesUntilDeparture.ToString() + " perc múlva indul";
+
+            var secondsUntilDeparture = departures[position].SecondsUntilDepartureTime;
+
+            if (secondsUntilDeparture <= 30)
+            {
+                minsUntilDepartureTimeTextView.Text = "Esedékes";
+            } else if (secondsUntilDeparture <= 60) {
+                minsUntilDepartureTimeTextView.Text = "Kevesebb, mint egy perc múlva indul";
+            } else
+            {
+                minsUntilDepartureTimeTextView.Text = (secondsUntilDeparture / 60).ToString() + " perc múlva indul";
+            }
 
             return row;
 
