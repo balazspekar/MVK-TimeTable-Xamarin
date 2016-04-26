@@ -46,11 +46,17 @@ namespace TimeTable.Droid.ListViewAdapters
 
             if (row == null)
             {
-                row = LayoutInflater.From(context).Inflate(Resource.Layout.MainScreenListViewRow, null, false);
+                row = LayoutInflater.From(context).Inflate(Resource.Layout.ListViewRowMainScreen, null, false);
             }
 
             TextView txtStationNick = row.FindViewById<TextView>(Resource.Id.txtStationNick);
             txtStationNick.Text = favorites[position].StationNickName;
+
+            TextView txtStationId = row.FindViewById<TextView>(Resource.Id.txtStationId);
+            txtStationId.Text = "Megállóazonosító: " + favorites[position].StationId;
+
+            ImageView imgLocationIcon = row.FindViewById<ImageView>(Resource.Id.imgLocationIcon);
+            imgLocationIcon.SetImageResource(Resource.Drawable.locationpin);
 
             return row;
         }

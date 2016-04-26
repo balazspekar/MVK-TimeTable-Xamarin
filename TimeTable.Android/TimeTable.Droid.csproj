@@ -38,7 +38,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidLinkSkip />
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
     <BundleAssemblies>False</BundleAssemblies>
@@ -70,41 +70,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddFavStation.cs" />
-    <Compile Include="Favorite.cs" />
+    <Compile Include="Activities\AddFavoriteActivity.cs" />
+    <Compile Include="Helpers\Favorite.cs" />
+    <Compile Include="Helpers\StorageHandler.cs" />
     <Compile Include="ListViewAdapters\MainScreenListViewAdapter.cs" />
     <Compile Include="ListViewAdapters\StationDetailsListViewAdapter.cs" />
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RouteDetails.cs" />
+    <Compile Include="Activities\RouteDetailsActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\Main.axml">
+    <AndroidResource Include="Resources\layout\ScreenMain.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\ActionMenu.axml">
+    <AndroidResource Include="Resources\layout\MenuMainScreenActionMenu.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\MainFirstStart.axml">
+    <AndroidResource Include="Resources\layout\ScreenMainNoFavorites.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\RouteDetails.axml">
+    <AndroidResource Include="Resources\layout\ScreenRouteDetails.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\StationDetailsListViewRow.axml">
+    <AndroidResource Include="Resources\layout\ListViewRowStationDetails.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\temp.axml">
+    <AndroidResource Include="Resources\layout\ScreenAddFavorite.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\AddFavStation.axml">
-      <SubType>AndroidResource</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\MainScreenListViewRow.axml">
+    <AndroidResource Include="Resources\layout\ListViewRowMainScreen.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -125,6 +123,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon_big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\locationpin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mynotes.txt" />
   </ItemGroup>
   <Import Project="..\TimeTable.SharedProject\TimeTable.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

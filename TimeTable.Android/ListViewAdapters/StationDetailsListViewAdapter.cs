@@ -40,7 +40,7 @@ namespace TimeTable.Droid.ListViewAdapters
 
             if (row == null)
             {
-                row = LayoutInflater.From(context).Inflate(Resource.Layout.StationDetailsListViewRow, null, false);
+                row = LayoutInflater.From(context).Inflate(Resource.Layout.ListViewRowStationDetails, null, false);
             }
 
             TextView routeNameTextView = row.FindViewById<TextView>(Resource.Id.routeNameTextView);
@@ -59,8 +59,10 @@ namespace TimeTable.Droid.ListViewAdapters
 
             if (secondsUntilDeparture <= 30)
             {
+                minsUntilDepartureTimeTextView.SetTextColor(Android.Graphics.Color.Red);
                 minsUntilDepartureTimeTextView.Text = "Esedékes";
             } else if (secondsUntilDeparture <= 60) {
+                minsUntilDepartureTimeTextView.SetTextColor(Android.Graphics.Color.Red);
                 minsUntilDepartureTimeTextView.Text = "Kevesebb, mint egy perc múlva indul";
             } else
             {

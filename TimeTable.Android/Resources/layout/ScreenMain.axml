@@ -5,12 +5,11 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:paddingTop="5dp"
     android:background="#fff">
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/watchedStationsListView" />
+        android:id="@+id/listViewFavorites" />
 </LinearLayout>

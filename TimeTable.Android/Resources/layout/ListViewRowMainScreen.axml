@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="1">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:id="@+id/stationDetailsRow">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/container">
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imgLocationIcon"
+                android:paddingTop="13dp"
+                android:paddingLeft="10dp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/container">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Petőfi tér"
+                android:paddingLeft="10dp"
+                android:id="@+id/txtStationNick"
+                android:textColor="#000000"
+                android:paddingTop="10dp"
+                android:textStyle="bold" />
+            <TextView
+                android:text="Megállóazonosító: 145"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtStationNick"
+                android:id="@+id/txtStationId"
+                android:textColor="#000000"
+                android:textStyle="italic"
+                android:textSize="10dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp" />
+        </RelativeLayout>
+    </TableRow>
+</TableLayout>

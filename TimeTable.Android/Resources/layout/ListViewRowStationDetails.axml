@@ -20,13 +20,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1V"
-                android:textSize="30dp"
+                android:textSize="25dp"
                 android:paddingLeft="15dp"
                 android:id="@+id/routeNameTextView"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 android:textColor="#000000"
-                android:paddingTop="6dp"
-                android:paddingBottom="6dp" />
+                android:paddingTop="5dp"
+                android:paddingBottom="8dp" />
         </LinearLayout>
         <RelativeLayout
             android:orientation="vertical"
@@ -40,7 +40,8 @@
                 android:paddingLeft="20dp"
                 android:id="@+id/departureTimeTextView"
                 android:textColor="#000000"
-                android:paddingTop="10dp" />
+                android:textStyle="bold"
+                android:paddingTop="6dp" />
             <TextView
                 android:text="5 perc múlva indul"
                 android:layout_width="wrap_content"
@@ -48,7 +49,8 @@
                 android:id="@+id/minsUntilDepartureTimeTextView"
                 android:layout_toRightOf="@id/departureTimeTextView"
                 android:textColor="#000000"
-                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:paddingTop="6dp"
                 android:paddingLeft="10dp" />
             <TextView
                 android:text="Tiszai-Pályaudvar - Felső-Majláth"

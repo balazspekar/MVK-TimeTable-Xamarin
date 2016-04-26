@@ -12,7 +12,7 @@ using System.ComponentModel;
 namespace TimeTable.Droid
 {
     [Activity(Label = "Virtuális Megállótábla", Icon = "@drawable/icon", Theme = "@android:style/Theme.Holo.Light")]
-    public class RouteDetails : Activity
+    public class RouteDetailsActivity : Activity
     {
         private SwipeRefreshLayout refresher;
         private ListView routeDetailsListView;
@@ -30,7 +30,7 @@ namespace TimeTable.Droid
             base.OnCreate(savedInstanceState);
 
             // Setting the layout
-            SetContentView(Resource.Layout.RouteDetails);
+            SetContentView(Resource.Layout.ScreenRouteDetails);
             txtLastUpdated = FindViewById<TextView>(Resource.Id.txtLastUpdated);
 
             // Reading SMART ID from previous Activity
