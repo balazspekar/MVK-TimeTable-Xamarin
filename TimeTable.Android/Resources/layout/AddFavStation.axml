@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:padding="15dp">
+    <TextView
+        android:text="Megálló Hozzáadása"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewMegalloHozzadasa"
+        android:paddingBottom="10dp"
+        android:textStyle="bold" />
+    <TextView
+        android:text="Megállóazonosító"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtStationIdentifier" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editStationIdentifier" />
+    <TextView
+        android:text="Megálló elnevezése"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewMegalloElnevezese"
+        android:paddingTop="15dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editStationNick"
+        android:layout_marginBottom="35dp" />
+    <Button
+        android:text="Hozzáadás"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAddNewFavStation" />
+</LinearLayout>

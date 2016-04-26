@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="1">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:id="@+id/stationDetailsRow">
+        <TextView
+            android:text="Station Nick"
+            android:layout_column="1"
+            android:textColor="#000000"
+            android:id="@+id/txtStationNick"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+    </TableRow>
+</TableLayout>

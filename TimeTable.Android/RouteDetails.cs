@@ -11,7 +11,7 @@ using System.ComponentModel;
 
 namespace TimeTable.Droid
 {
-    [Activity(Label = "Virtuális Megállótábla")]
+    [Activity(Label = "Virtuális Megállótábla", Icon = "@drawable/icon", Theme = "@android:style/Theme.Holo.Light")]
     public class RouteDetails : Activity
     {
         private SwipeRefreshLayout refresher;

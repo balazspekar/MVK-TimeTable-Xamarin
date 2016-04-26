@@ -1,31 +1,26 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Runtime.InteropServices;
 using Android.App;
 using Android.Content;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Javax.Security.Auth;
-using TimeTable.SharedProject;
 using System.Collections.Generic;
-using Android;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using Newtonsoft.Json;
+using TimeTable.Droid.ListViewAdapters;
 
 namespace TimeTable.Droid
 {
-    [Activity(Label = "Megálló", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.DeviceDefault.Light.DarkActionBar")]
+    [Activity(Label = "Megálló", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.Holo.Light")]
 
     public class MainActivity : Activity
     {
         ListView watchedStations;
-        List<string> watchedStationDetails;
-        string[] items;
+        List<Favorite> favorites;
+        private MainScreenListViewAdapter adapter;
 
         #region ActionBarMenu
-        
-
-
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Layout.ActionMenu, menu);
@@ -36,16 +31,16 @@ namespace TimeTable.Droid
         {
             switch (item.ItemId)
             {
-                case Resource.Id.actionBarBtnSettings:
-                    Console.WriteLine("ActionBar Setting Button Pressed");
+                case Resource.Id.actionBarBtnAdd:
+                    //var AddFavStation = new Intent(this, typeof(AddFavStation));
+                    //StartActivity(AddFavStation);
                     return true;
             }
+
             return base.OnOptionsItemSelected(item);
         }
         #endregion
 
-        
-        
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -53,9 +48,28 @@ namespace TimeTable.Droid
 
             watchedStations = FindViewById<ListView>(Resource.Id.watchedStationsListView);
 
-            //items = new string[] { "513", "514", "89", "483", "485", "487" };
-            items = new string[] { "494", "483", "485", "487" };
-            var adapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
+            favorites = new List<Favorite>();
+            favorites.Add(new Favorite { StationNickName = "LAEV", StationId = "514"});
+            favorites.Add(new Favorite { StationNickName = "Petőfi tér", StationId = "309"});
+            favorites.Add(new Favorite { StationNickName = "Hősök tere", StationId = "569"});
+            favorites.Add(new Favorite { StationNickName = "Egyetemi kollégium", StationId = "125"});
+            favorites.Add(new Favorite { StationNickName = "Népkert", StationId = "282"});
+            favorites.Add(new Favorite { StationNickName = "Centrum", StationId = "83"});
+            favorites.Add(new Favorite { StationNickName = "Hajós Alfréd utca", StationId = "167"});
+            favorites.Add(new Favorite { StationNickName = "Lévay József utca", StationId = "240"});
+            favorites.Add(new Favorite { StationNickName = "Avas városközpont", StationId = "27"});
+            favorites.Add(new Favorite { StationNickName = "Alsó-Majláth", StationId = "9"});
+            favorites.Add(new Favorite { StationNickName = "Zoltán utca", StationId = "332" });
+            favorites.Add(new Favorite { StationNickName = "Repülőtér", StationId = "318" });
+            favorites.Add(new Favorite { StationNickName = "Megyei Kórház", StationId = "264" });
+            favorites.Add(new Favorite { StationNickName = "Levente Vezér utca", StationId = "234" });
+            favorites.Add(new Favorite { StationNickName = "Szondi György utca", StationId = "364" });
+            favorites.Add(new Favorite { StationNickName = "Vörösmarty városrész", StationId = "448" });
+            favorites.Add(new Favorite { StationNickName = "Auchan BORSOD", StationId = "587" });
+            favorites.Add(new Favorite { StationNickName = "Tatárdomb", StationId = "378" });
+
+
+            adapter = new MainScreenListViewAdapter(this, favorites);
 
             watchedStations.Adapter = adapter;
 
@@ -66,31 +80,22 @@ namespace TimeTable.Droid
         private void WatchedStations_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             var RouteDetails = new Intent(this, typeof(RouteDetails));
-            RouteDetails.PutExtra("SMART_ID", items[e.Position]);
-            
-            if (e.Position == 0) 
-            {
-                Toast.MakeText(this, "Thököly - Belváros Felé", ToastLength.Long).Show();
-            }
-
-            if (e.Position == 1)
-            {
-                Toast.MakeText(this, "Centrum - Diósgyőr felé", ToastLength.Long).Show();
-            }
-
-            if (e.Position == 2)
-            {
-                Toast.MakeText(this, "Villanyrendőr - Diósgyőr felé", ToastLength.Long).Show();
-            }
-
-            if (e.Position == 3)
-            {
-                Toast.MakeText(this, "Városház tér - Diósgyőr felé", ToastLength.Long).Show();
-            }
-
+            RouteDetails.PutExtra("SMART_ID", favorites[e.Position].StationId);
             StartActivity(RouteDetails);
             this.OverridePendingTransition(Resource.Animation.slide_in_top, Resource.Animation.slide_out_bottom);
         }
+
+        //private void SerializeSettingsToFile(Settings settings)
+        //{
+        //    var json = JsonConvert.SerializeObject(settings);
+        //    var path = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+        //    var file = Path.Combine(path, "megallo_settings.txt");
+
+        //    using (var streamWriter = new StreamWriter(file))
+        //    {
+        //        streamWriter.WriteLine(json);
+        //    }
+        //}
     }
 }
 

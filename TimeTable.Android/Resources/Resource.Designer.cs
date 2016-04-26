@@ -88,47 +88,68 @@ namespace TimeTable.Droid
 			// aapt resource value: 0x7f060001
 			public const int actionBarBtnSettings = 2131099649;
 			
-			// aapt resource value: 0x7f060004
-			public const int btnTakeMeToSettings = 2131099652;
-			
-			// aapt resource value: 0x7f060009
-			public const int container = 2131099657;
-			
-			// aapt resource value: 0x7f06000b
-			public const int departureTimeTextView = 2131099659;
-			
-			// aapt resource value: 0x7f06000c
-			public const int minsUntilDepartureTimeTextView = 2131099660;
-			
-			// aapt resource value: 0x7f060006
-			public const int refresher = 2131099654;
-			
-			// aapt resource value: 0x7f06000d
-			public const int routeDescTextView = 2131099661;
-			
 			// aapt resource value: 0x7f060007
-			public const int routeDetailsListView = 2131099655;
+			public const int btnAddNewFavStation = 2131099655;
 			
 			// aapt resource value: 0x7f06000a
-			public const int routeNameTextView = 2131099658;
+			public const int btnTakeMeToSettings = 2131099658;
 			
-			// aapt resource value: 0x7f060008
-			public const int stationDetailsRow = 2131099656;
+			// aapt resource value: 0x7f060010
+			public const int container = 2131099664;
+			
+			// aapt resource value: 0x7f060012
+			public const int departureTimeTextView = 2131099666;
+			
+			// aapt resource value: 0x7f060004
+			public const int editStationIdentifier = 2131099652;
+			
+			// aapt resource value: 0x7f060006
+			public const int editStationNick = 2131099654;
+			
+			// aapt resource value: 0x7f060013
+			public const int minsUntilDepartureTimeTextView = 2131099667;
 			
 			// aapt resource value: 0x7f06000e
-			public const int textView1 = 2131099662;
+			public const int refresher = 2131099662;
+			
+			// aapt resource value: 0x7f060014
+			public const int routeDescTextView = 2131099668;
 			
 			// aapt resource value: 0x7f06000f
-			public const int textView2 = 2131099663;
+			public const int routeDetailsListView = 2131099663;
 			
-			// aapt resource value: 0x7f060005
-			public const int txtLastUpdated = 2131099653;
+			// aapt resource value: 0x7f060011
+			public const int routeNameTextView = 2131099665;
+			
+			// aapt resource value: 0x7f06000b
+			public const int stationDetailsRow = 2131099659;
+			
+			// aapt resource value: 0x7f060015
+			public const int textView1 = 2131099669;
+			
+			// aapt resource value: 0x7f060016
+			public const int textView2 = 2131099670;
+			
+			// aapt resource value: 0x7f06000d
+			public const int txtLastUpdated = 2131099661;
+			
+			// aapt resource value: 0x7f060009
+			public const int txtMainWithoutStatonsWarningMessage = 2131099657;
 			
 			// aapt resource value: 0x7f060003
-			public const int txtMainWithoutStatonsWarningMessage = 2131099651;
+			public const int txtStationIdentifier = 2131099651;
+			
+			// aapt resource value: 0x7f06000c
+			public const int txtStationNick = 2131099660;
+			
+			// aapt resource value: 0x7f060005
+			public const int txtViewMegalloElnevezese = 2131099653;
 			
 			// aapt resource value: 0x7f060002
-			public const int watchedStationsListView = 2131099650;
+			public const int txtViewMegalloHozzadasa = 2131099650;
+			
+			// aapt resource value: 0x7f060008
+			public const int watchedStationsListView = 2131099656;
 			
 			static Id()
 			{
@@ -147,19 +168,25 @@ namespace TimeTable.Droid
 			public const int ActionMenu = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int AddFavStation = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int MainFirstStart = 2130903042;
+			public const int Main = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int RouteDetails = 2130903043;
+			public const int MainFirstStart = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int StationDetailsListViewRow = 2130903044;
+			public const int MainScreenListViewRow = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int temp = 2130903045;
+			public const int RouteDetails = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int StationDetailsListViewRow = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int temp = 2130903047;
 			
 			static Layout()
 			{
