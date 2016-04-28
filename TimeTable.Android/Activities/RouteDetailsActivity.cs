@@ -12,7 +12,7 @@ using System.Threading;
 
 namespace TimeTable.Droid
 {
-    [Activity(Label = "Virtuális Megállótábla", Icon = "@drawable/icon", Theme = "@android:style/Theme.Holo.Light")]
+    [Activity(Label = "Virtuális Megállótábla", Icon = "@android:color/transparent", Theme = "@android:style/Theme.Material.Light.DarkActionBar")]
     public class RouteDetailsActivity : Activity
     {
         private SwipeRefreshLayout refresher;
