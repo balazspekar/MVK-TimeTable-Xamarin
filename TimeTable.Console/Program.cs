@@ -17,7 +17,8 @@ namespace TimeTable.Console
             {
                 System.Console.WriteLine(shcedule.ToString());
             }
-            
+
+            System.Console.WriteLine(DateTime.Now);
             
 
         }

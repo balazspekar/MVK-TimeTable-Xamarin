@@ -45,7 +45,8 @@ namespace TimeTable.SharedProject
                 var actualRouteName = actualLineSplitted[0];
                 var actualRouteDescription = actualLineSplitted[1].Trim();
                 var actualDepartureTime = DateTime.Parse(actualLineSplitted[2]);
-                var actualSecondsUntilDepartureTime = (int)((actualDepartureTime - DateTime.Now).TotalSeconds);
+                var now = DateTime.Now;
+                var actualSecondsUntilDepartureTime = (int)((actualDepartureTime - now).TotalSeconds);
 
                 // creating a bundle Departure object and enqueing it
                 var departure = new Departure(actualRouteName, actualRouteDescription, actualDepartureTime, actualSecondsUntilDepartureTime);

@@ -14,10 +14,26 @@
         android:id="@+id/txtLastUpdated"
         android:textSize="10sp"
         android:gravity="left"
-        android:background="@android:color/holo_blue_bright"
+        android:background="#bcebfc"
         android:paddingTop="3dp"
         android:paddingBottom="3dp"
         android:paddingLeft="15dp" />
+    <TextView
+        android:text="Villanyrendőr"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:id="@+id/txtTitleMarquee"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="false"
+        android:scrollHorizontally="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp" />
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/refresher"
         android:layout_width="match_parent"

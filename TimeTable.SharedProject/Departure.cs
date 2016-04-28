@@ -10,10 +10,15 @@ namespace TimeTable.SharedProject
     /// </summary>
     class Departure
     {
-        public string RouteName { get; }
-        public string RouteDescription { get; } 
-        public DateTime DepartureTime { get; }
-        public int SecondsUntilDepartureTime { get; }
+        public string RouteName { get; set; }
+        public string RouteDescription { get; set; } 
+        public DateTime DepartureTime { get; set; }
+        public int SecondsUntilDepartureTime { get; set; }
+
+        public Departure()
+        {
+
+        }
 
         public Departure(string routeName, string routeDescription, DateTime departureTime, int secondsUntilDepartureTime)
         {

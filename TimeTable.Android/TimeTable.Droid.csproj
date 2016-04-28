@@ -129,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="mynotes.txt" />
+    <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
   <Import Project="..\TimeTable.SharedProject\TimeTable.SharedProject.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
