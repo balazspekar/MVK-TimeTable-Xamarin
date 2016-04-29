@@ -6,7 +6,7 @@
     android:minWidth="25px"
     android:minHeight="25px"
     android:background="#fff">
-    <Toolbar
+    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

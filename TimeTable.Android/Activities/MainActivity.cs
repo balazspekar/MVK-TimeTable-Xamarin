@@ -5,8 +5,8 @@ using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
 using TimeTable.Droid.ListViewAdapters;
-using Android.Support.V7.App;
 using Android.Support.V4.View;
+using Android.Support.V7.App;
 
 namespace TimeTable.Droid
 {
@@ -17,7 +17,7 @@ namespace TimeTable.Droid
         // UI Fields
         private ListView listViewFavorites;
         private MainScreenListViewAdapter adapter;
-        private Toolbar toolbarMain;
+        private Android.Support.V7.Widget.Toolbar toolbarMain;
 
         // Data Fields
         private List<Favorite> favorites;
@@ -51,9 +51,10 @@ namespace TimeTable.Droid
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.ScreenMain);
-            toolbarMain = FindViewById<Toolbar>(Resource.Id.toolbarMain);
-            SetActionBar(toolbarMain);
-            ActionBar.Title = "Hello from Toolbar";
+            toolbarMain = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbarMain);
+            toolbarMain.Title = "YAY";
+            
+            
 
             listViewFavorites = FindViewById<ListView>(Resource.Id.listViewFavorites);
 
