@@ -1,17 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-  <style name="MyTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
-    <item name="android:windowNoTitle">true</item>
+  <style name="MyTheme" parent="MyTheme.Base">
+  </style>
+  <style name="MyTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="windowNoTitle">true</item>
     <!--We will be using the toolbar so no need to show ActionBar-->
-    <item name="android:windowActionBar">false</item>
+    <item name="windowActionBar">false</item>
     <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
+    <!-- https://developer.xamarin.com/guides/android/user_interface/material_theme/ -->
     <!-- colorPrimary is used for the default action bar background -->
-    <item name="android:colorPrimary">#2196F3</item>
+    <item name="colorPrimary">#1E88E5</item>
     <!-- colorPrimaryDark is used for the status bar -->
-    <item name="android:colorPrimaryDark">#1976D2</item>
+    <item name="colorPrimaryDark">#1565C0</item>
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
-    <item name="android:colorAccent">#FF4081</item>
+    <item name="colorAccent">#1E88E5</item>
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
   </style>

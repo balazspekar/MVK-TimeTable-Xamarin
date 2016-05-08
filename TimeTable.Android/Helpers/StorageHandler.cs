@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.IO;
+using System.Text;
+using System;
 
 namespace TimeTable.Droid.Helpers
 {
@@ -33,6 +35,14 @@ namespace TimeTable.Droid.Helpers
             return JsonConvert.DeserializeObject<List<Favorite>>(json);
 
         }
+
+        public static bool SettingsFileIsPresent()
+        {
+            var path = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+            var file = Path.Combine(path, "megallo_settings.txt");
+            return File.Exists(file);
+        }
+
 
     }
 }

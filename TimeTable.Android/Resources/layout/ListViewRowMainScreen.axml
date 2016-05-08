@@ -9,26 +9,20 @@
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical"
-        android:background="#FFFFFF"
         android:id="@+id/stationDetailsRow">
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="56.5dp"
             android:layout_height="match_parent"
-            android:id="@+id/container">
-            <ImageView
-                android:src="@android:drawable/ic_menu_gallery"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:id="@+id/imgLocationIcon"
-                android:paddingTop="13dp"
-                android:paddingLeft="10dp" />
-        </LinearLayout>
+            android:id="@+id/container"
+            android:minWidth="25px"
+            android:minHeight="25px" />
         <RelativeLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/container">
+            android:id="@+id/container"
+            android:layout_column="1">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,7 +31,8 @@
                 android:id="@+id/txtStationNick"
                 android:textColor="#000000"
                 android:paddingTop="10dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:ellipsize="marquee" />
             <TextView
                 android:text="Megállóazonosító: 145"
                 android:layout_width="wrap_content"

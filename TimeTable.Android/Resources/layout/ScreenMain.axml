@@ -5,17 +5,14 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:background="#fff">
-    <android.support.v7.widget.Toolbar
+    android:background="#FFF">
+    <include
         android:id="@+id/toolbarMain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?android:attr/actionBarSize"
-        android:background="?android:attr/colorPrimary" />
+        layout="@layout/toolbarMain" />
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/listViewFavorites" />
+        android:id="@+id/favoritesListView" />
 </LinearLayout>

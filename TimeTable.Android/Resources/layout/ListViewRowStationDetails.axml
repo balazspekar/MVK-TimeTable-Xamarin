@@ -15,9 +15,10 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/container">
+            android:id="@+id/container"
+            android:layout_marginRight="0.0dp">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="67dp"
                 android:layout_height="wrap_content"
                 android:text="1V"
                 android:textSize="25dp"
@@ -37,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18:47"
-                android:paddingLeft="20dp"
+                android:paddingLeft="0dp"
                 android:id="@+id/departureTimeTextView"
                 android:textColor="#000000"
                 android:textStyle="bold"
@@ -61,7 +62,7 @@
                 android:textColor="#000000"
                 android:textStyle="italic"
                 android:textSize="10dp"
-                android:paddingLeft="20dp" />
+                android:paddingLeft="0dp" />
         </RelativeLayout>
     </TableRow>
 </TableLayout>

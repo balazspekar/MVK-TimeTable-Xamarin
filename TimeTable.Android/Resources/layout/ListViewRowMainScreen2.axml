@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:paddingBottom="2dp"
+    android:paddingLeft="3dp"
+    android:paddingRight="5dp">
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView1"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="1dp" />
+    <TextView
+        android:text="Petőfi tér"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageView1"
+        android:id="@+id/txtStationNick"
+        android:paddingTop="8dp"
+        android:lines="1"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+    <TextView
+        android:text="Megállóazonosító"
+        android:textStyle="italic"
+        android:textSize="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtStationNick"
+        android:id="@+id/txtStationId"
+        android:layout_toRightOf="@id/imageView1"
+        android:textColor="@color/black"
+        android:paddingBottom="2dp" />
+</RelativeLayout>

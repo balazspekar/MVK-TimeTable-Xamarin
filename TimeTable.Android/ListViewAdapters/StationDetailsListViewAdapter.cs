@@ -47,7 +47,7 @@ namespace TimeTable.Droid.ListViewAdapters
             routeNameTextView.Text = departures[position].RouteName;
 
             TextView routeDescTextView = row.FindViewById<TextView>(Resource.Id.routeDescTextView);
-            routeDescTextView.Text = departures[position].RouteDescription;
+            routeDescTextView.Text = "Viszonylat: " + departures[position].RouteDescription;
 
             TextView departureTimeTextView = row.FindViewById<TextView>(Resource.Id.departureTimeTextView);
             var departureTime = departures[position].DepartureTime.ToString("HH:mm");
@@ -63,7 +63,7 @@ namespace TimeTable.Droid.ListViewAdapters
                 minsUntilDepartureTimeTextView.Text = "Esedékes";
             } else if (secondsUntilDeparture <= 60) {
                 minsUntilDepartureTimeTextView.SetTextColor(Android.Graphics.Color.Red);
-                minsUntilDepartureTimeTextView.Text = "Kevesebb, mint egy perc múlva indul";
+                minsUntilDepartureTimeTextView.Text = "1 perc múlva indul";
             } else
             {
                 minsUntilDepartureTimeTextView.Text = (secondsUntilDeparture / 60).ToString() + " perc múlva indul";

@@ -748,29 +748,29 @@ namespace TimeTable.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0a004b
-			public const int abc_background_cache_hint_selector_material_dark = 2131361867;
-			
 			// aapt resource value: 0x7f0a004c
-			public const int abc_background_cache_hint_selector_material_light = 2131361868;
+			public const int abc_background_cache_hint_selector_material_dark = 2131361868;
+			
+			// aapt resource value: 0x7f0a004d
+			public const int abc_background_cache_hint_selector_material_light = 2131361869;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int abc_input_method_navigation_guard = 2131361792;
 			
-			// aapt resource value: 0x7f0a004d
-			public const int abc_primary_text_disable_only_material_dark = 2131361869;
-			
 			// aapt resource value: 0x7f0a004e
-			public const int abc_primary_text_disable_only_material_light = 2131361870;
+			public const int abc_primary_text_disable_only_material_dark = 2131361870;
 			
 			// aapt resource value: 0x7f0a004f
-			public const int abc_primary_text_material_dark = 2131361871;
+			public const int abc_primary_text_disable_only_material_light = 2131361871;
 			
 			// aapt resource value: 0x7f0a0050
-			public const int abc_primary_text_material_light = 2131361872;
+			public const int abc_primary_text_material_dark = 2131361872;
 			
 			// aapt resource value: 0x7f0a0051
-			public const int abc_search_url_text = 2131361873;
+			public const int abc_primary_text_material_light = 2131361873;
+			
+			// aapt resource value: 0x7f0a0052
+			public const int abc_search_url_text = 2131361874;
 			
 			// aapt resource value: 0x7f0a0001
 			public const int abc_search_url_text_normal = 2131361793;
@@ -781,11 +781,11 @@ namespace TimeTable.Droid
 			// aapt resource value: 0x7f0a0003
 			public const int abc_search_url_text_selected = 2131361795;
 			
-			// aapt resource value: 0x7f0a0052
-			public const int abc_secondary_text_material_dark = 2131361874;
-			
 			// aapt resource value: 0x7f0a0053
-			public const int abc_secondary_text_material_light = 2131361875;
+			public const int abc_secondary_text_material_dark = 2131361875;
+			
+			// aapt resource value: 0x7f0a0054
+			public const int abc_secondary_text_material_light = 2131361876;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int accent_material_dark = 2131361796;
@@ -795,6 +795,9 @@ namespace TimeTable.Droid
 			
 			// aapt resource value: 0x7f0a0044
 			public const int aqua = 2131361860;
+			
+			// aapt resource value: 0x7f0a004b
+			public const int background = 2131361867;
 			
 			// aapt resource value: 0x7f0a0006
 			public const int background_floating_material_dark = 2131361798;
@@ -985,11 +988,11 @@ namespace TimeTable.Droid
 			// aapt resource value: 0x7f0a0037
 			public const int switch_thumb_disabled_material_light = 2131361847;
 			
-			// aapt resource value: 0x7f0a0054
-			public const int switch_thumb_material_dark = 2131361876;
-			
 			// aapt resource value: 0x7f0a0055
-			public const int switch_thumb_material_light = 2131361877;
+			public const int switch_thumb_material_dark = 2131361877;
+			
+			// aapt resource value: 0x7f0a0056
+			public const int switch_thumb_material_light = 2131361878;
 			
 			// aapt resource value: 0x7f0a0038
 			public const int switch_thumb_normal_material_dark = 2131361848;
@@ -1615,6 +1618,9 @@ namespace TimeTable.Droid
 			// aapt resource value: 0x7f0b0038
 			public const int expanded_menu = 2131427384;
 			
+			// aapt resource value: 0x7f0b006f
+			public const int favoritesListView = 2131427439;
+			
 			// aapt resource value: 0x7f0b0004
 			public const int home = 2131427332;
 			
@@ -1630,8 +1636,8 @@ namespace TimeTable.Droid
 			// aapt resource value: 0x7f0b0026
 			public const int image = 2131427366;
 			
-			// aapt resource value: 0x7f0b0052
-			public const int imgLocationIcon = 2131427410;
+			// aapt resource value: 0x7f0b0054
+			public const int imageView1 = 2131427412;
 			
 			// aapt resource value: 0x7f0b0066
 			public const int info = 2131427430;
@@ -1644,9 +1650,6 @@ namespace TimeTable.Droid
 			
 			// aapt resource value: 0x7f0b0009
 			public const int listMode = 2131427337;
-			
-			// aapt resource value: 0x7f0b006f
-			public const int listViewFavorites = 2131427439;
 			
 			// aapt resource value: 0x7f0b0028
 			public const int list_item = 2131427368;
@@ -1684,14 +1687,14 @@ namespace TimeTable.Droid
 			// aapt resource value: 0x7f0b003b
 			public const int radio = 2131427387;
 			
-			// aapt resource value: 0x7f0b0074
-			public const int refresher = 2131427444;
+			// aapt resource value: 0x7f0b0073
+			public const int refresher = 2131427443;
 			
 			// aapt resource value: 0x7f0b0058
 			public const int routeDescTextView = 2131427416;
 			
-			// aapt resource value: 0x7f0b0075
-			public const int routeDetailsListView = 2131427445;
+			// aapt resource value: 0x7f0b0074
+			public const int routeDetailsListView = 2131427444;
 			
 			// aapt resource value: 0x7f0b0055
 			public const int routeNameTextView = 2131427413;
@@ -1801,26 +1804,23 @@ namespace TimeTable.Droid
 			// aapt resource value: 0x7f0b006e
 			public const int toolbarMain = 2131427438;
 			
+			// aapt resource value: 0x7f0b0072
+			public const int toolbarRouteDetails = 2131427442;
+			
 			// aapt resource value: 0x7f0b002e
 			public const int topPanel = 2131427374;
-			
-			// aapt resource value: 0x7f0b0072
-			public const int txtLastUpdated = 2131427442;
 			
 			// aapt resource value: 0x7f0b0070
 			public const int txtMainWithoutStatonsWarningMessage = 2131427440;
 			
-			// aapt resource value: 0x7f0b0054
-			public const int txtStationId = 2131427412;
+			// aapt resource value: 0x7f0b0053
+			public const int txtStationId = 2131427411;
 			
 			// aapt resource value: 0x7f0b0069
 			public const int txtStationIdentifier = 2131427433;
 			
-			// aapt resource value: 0x7f0b0053
-			public const int txtStationNick = 2131427411;
-			
-			// aapt resource value: 0x7f0b0073
-			public const int txtTitleMarquee = 2131427443;
+			// aapt resource value: 0x7f0b0052
+			public const int txtStationNick = 2131427410;
 			
 			// aapt resource value: 0x7f0b006b
 			public const int txtViewMegalloElnevezese = 2131427435;
@@ -1960,58 +1960,67 @@ namespace TimeTable.Droid
 			public const int ListViewRowMainScreen = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int ListViewRowStationDetails = 2130903066;
+			public const int ListViewRowMainScreen2 = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int MenuMainScreenActionMenu = 2130903067;
+			public const int ListViewRowStationDetails = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int notification_media_action = 2130903068;
+			public const int MenuMainScreenActionMenu = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int notification_media_cancel_action = 2130903069;
+			public const int notification_media_action = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int notification_template_big_media = 2130903070;
+			public const int notification_media_cancel_action = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int notification_template_big_media_narrow = 2130903071;
+			public const int notification_template_big_media = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int notification_template_lines = 2130903072;
+			public const int notification_template_big_media_narrow = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int notification_template_media = 2130903073;
+			public const int notification_template_lines = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int notification_template_part_chronometer = 2130903074;
+			public const int notification_template_media = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int notification_template_part_time = 2130903075;
+			public const int notification_template_part_chronometer = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int ScreenAddFavorite = 2130903076;
+			public const int notification_template_part_time = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int ScreenMain = 2130903077;
+			public const int ScreenAddFavorite = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int ScreenMainNoFavorites = 2130903078;
+			public const int ScreenMain = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int ScreenRouteDetails = 2130903079;
+			public const int ScreenMainNoFavorites = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int select_dialog_item_material = 2130903080;
+			public const int ScreenRouteDetails = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int select_dialog_multichoice_material = 2130903081;
+			public const int select_dialog_item_material = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int select_dialog_singlechoice_material = 2130903082;
+			public const int select_dialog_multichoice_material = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int support_simple_spinner_dropdown_item = 2130903083;
+			public const int select_dialog_singlechoice_material = 2130903083;
+			
+			// aapt resource value: 0x7f03002c
+			public const int support_simple_spinner_dropdown_item = 2130903084;
+			
+			// aapt resource value: 0x7f03002d
+			public const int toolbarMain = 2130903085;
+			
+			// aapt resource value: 0x7f03002e
+			public const int toolbarRouteDetails = 2130903086;
 			
 			static Layout()
 			{
@@ -2543,6 +2552,9 @@ namespace TimeTable.Droid
 			
 			// aapt resource value: 0x7f08012f
 			public const int MyTheme = 2131231023;
+			
+			// aapt resource value: 0x7f080130
+			public const int MyTheme_Base = 2131231024;
 			
 			// aapt resource value: 0x7f080010
 			public const int Platform_AppCompat = 2131230736;

@@ -4,8 +4,7 @@
   
   <item
       android:id="@+id/actionBarBtnAdd"
-      android:title="+"
-      android:showAsAction="ifRoom" />
+      android:title="Hozzáadás" />
   <item
       android:id="@+id/actionBarBtnSettings"
       android:title="Beállítások" />
@@ -14,8 +13,5 @@
       android:title="Felhasználói útmutató" />
   <item
       android:id="@+id/actionBarBtnSettings"
-      android:title="Gyors_Csekkolás" />
-  <item
-      android:id="@+id/actionBarBtnSettings"
-      android:title="NévjegyKe" />
+      android:title="Névjegy" />
 </menu>
